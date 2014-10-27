@@ -3,8 +3,7 @@
   <meta charset="utf-8"/>
   <title>程序预览</title>
   <link rel="shortcut icon" href="/media/favicon.ico?ver=0.1" /> 
-  <script type="text/javascript" src="/media/jquery-2.0.2.min.js"></script>    
-  <link type="text/css" href="/media/pure-min.css" rel="stylesheet" />
+  <?php echo HTML::style(STATIC_HOME_URL.'/media/pure/pure-min.css'); ?>
   <style>
     .pure-g {
       margin-left: 50px;
