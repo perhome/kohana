@@ -5,7 +5,7 @@ abstract class Model  {
   protected static $group = 'default';
 	protected static $instances = array();
 
-  public static function factory($name, $group = NULL) {
+  public static function factory($name, $config=null, $group = NULL) {
 		if ($group === NULL)
 		{
 			$group = $name.'#'.static::$group;
@@ -20,7 +20,7 @@ abstract class Model  {
     if (substr($name, 0, 6) != 'Model_') {
       $name = 'Model_'.$name;
     }
-		Model::$instances[$group] = new $name;
+		Model::$instances[$group] = new $name($config);
     return Model::$instances[$group];
   }
 }
